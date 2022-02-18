@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Add New Movie</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/new-movie.css" type="text/css">
+</head>
+
+<body>
+  <div class="main-block">
+    
+    <form id="newMovieForm" method="post" action="/movie">
+      <h1>Add New Movie</h1>
+      <div class="info">
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Iron Man" required>
+        <label>Genre</label>
+        <input type="text" name="genre" placeholder="Action" required>
+        <label>Release Date</label>
+        <input type="date" name="release_date" required>
+        <label>Running Time</label>
+        <input type="number" name="running_time" placeholder="126" required>
+      </div>
+      <label>Synopsis</label>
+      <textarea rows="4" name="synopsis" placeholder="A billionaire industrialist and genius inventor, Tony Stark (Robert Downey Jr.), is conducting weapons tests overseas, but terrorists kidnap him to force him to build a devastating weapon." form="newMovieForm"></textarea>
+      <button type="submit" value="Submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
