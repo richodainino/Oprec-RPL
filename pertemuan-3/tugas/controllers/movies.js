@@ -1,5 +1,6 @@
 const Movie = require("../models/Movie");
 
+// Metode POST
 const createMovie = async (req, res) => {
   try {
     const movie = await Movie.create(req.body);
@@ -14,7 +15,6 @@ const getAllMovies = async (req, res) => {
     const searchText = req.query.search;
     const regex = new RegExp(searchText, 'gi');
     const movies = await Movie.find({ title: regex });
-    console.log('tes', movies);
     res.status(200).json({
       success: true,
       data: {
@@ -88,4 +88,4 @@ const editMovie = async (req, res) => {
   }
 };
 
-module.exports = { createMovie,getAllMovies, getMovie, updateMovie, deleteMovie, editMovie };
+module.exports = { createMovie, getAllMovies, getMovie, updateMovie, deleteMovie, editMovie };
